@@ -1,0 +1,182 @@
+/*Importo desde Google font la fuente de texto elegida*/
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*Establezco clases para poder modificar dinamicamente los parametros que tenga como valor la clase*/
+:root{
+    --color-primario: black;
+    --color-secundario: aliceblue;
+    --color-terciario: rgb(79, 170, 186);
+    --color-cuaternario: rgb(196, 155, 43);
+
+    --fuente-montserrat: "Montserrat", sans-serif;
+    --fuente-krona: "Krona One", sans-serif;
+}
+/*------------------------------------------------------------------------------------------*/
+body {
+    margin: 0%;
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+    box-sizing: border-box;
+}
+/*------------------------------------------------------------------------------------------*/
+.header {
+    display: flex;
+    margin: 1% 0% 1% 10%;
+
+}
+
+.header_menu {
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem;
+}
+
+.header_menu_link {
+    font-family: var(--fuente-montserrat);
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-decoration: none;
+    text-align: center;
+    color: var(--color-cuaternario);
+}
+
+.header_menu_link:hover {
+    color: rgb(138, 105, 15);;
+}
+
+.div_header {
+    background-color: var(--color-secundario);
+    position: fixed;
+    width: 100%;
+}
+/*------------------------------------------------------------------------------------------*/
+strong {
+    color: var(--color-terciario)
+}
+
+.presentacion {
+    display: flex;
+    padding: 7.5% 10%;
+    justify-content: space-between;
+    gap: 3%; /*Distancia entre elementos*/
+}
+/*------------------------------------------------------------------------------------------*/
+.presentacion_contenido {
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+
+}
+
+.presentacion_titulo {
+    margin: 2% 0%;
+    font-family: var(--fuente-krona);
+    font-weight: 400;
+    font-size: 2.25rem;
+}
+
+.presentacion_subtitulo {
+    margin: 2% 0%;
+    font-size: 1.5rem;
+    font-family: var(--fuente-krona);
+    font-weight: 400;
+}
+
+/*Unidades "rem" responden a medidas relativas y no absolutas. 1 rem = 16 px   */
+.presentacion_parrafo {
+    margin: 1rem 0rem;
+    font-size: 1.5rem;
+    font-family: var(--fuente-montserrat);
+    text-decoration: none;
+}
+.presentacion_enlaces {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px; 
+}
+/*------------------------------------------------------------------------------------------*/
+.botones {
+    display: flex;
+    justify-content: center;
+    font-family: var(--fuente-montserrat);
+    font-weight: 600;
+    width: 50%;
+    text-decoration: none;
+    font-size: 30px;
+    border-radius: 8px;
+    gap: 10px;
+    border: 2px solid var(--color-terciario);
+    color: var(--color-secundario);
+    padding: 10px 0;
+    text-align: center;
+}
+
+.botones:visited {
+    text-decoration: none;
+}
+
+.botones:hover {
+    color: var(--color-secundario);
+    background-color: #1f1f1f;
+    width: 55%;
+}
+/*------------------------------------------------------------------------------------------*/
+.footer {
+    margin: auto;
+    padding: 24px;
+    bottom: 0px;
+    color: rgb(69, 69, 69);
+    font-family: var(--fuente-montserrat);
+    font-weight: 400;
+    font-size: 1.5rem;
+    background-color: var(--color-cuaternario);
+    text-align: center;
+}
+
+.foto-perfil {
+    margin: 2%;
+    border-radius: 10px;
+    height: 53.5%;
+    width: 53.5%;
+    border: 2px solid var(--color-terciario);
+}
+
+.link-certificado {
+    text-decoration: none;
+    color: var(--color-terciario);
+    ;
+}
+/*------------------------------------------------------------------------------------------*/
+/*Altera los parametros cuando es menor a width:1200px*/
+@media (max-width: 1200px){
+ 
+    .presentacion{
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .presentacion_contenido{
+        width: auto;
+    }
+
+    .header{
+        margin: 2%;
+        padding: 0%;
+        justify-content: center;
+    }
+
+    .header_menu{
+        justify-content: center;
+    }
+
+    .header_menu_link {
+        font-size: 1rem;
+    }    
+    .foto-perfil{
+        text-align: center;
+    }
+}
